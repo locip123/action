@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: '拉取代码'
-      use: actions/checkout@v4 
+      uses: actions/checkout@v4 
     - name: '学习'
       run: pwd
     - name: '当前目录文件'
