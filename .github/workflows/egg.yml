@@ -4,8 +4,10 @@ jobs:
   ubuntu-test:
     runs-on: ubuntu-latest
     steps:
-    - run: pwd
-    - run: ls
+    - name: '学习'
+      run: pwd
+    - name: '当前目录文件'
+      run: ls
   win-test:
     runs-on: windows-latest
     steps:
