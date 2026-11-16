@@ -27,6 +27,17 @@ jobs:
       uses: actions/upload-pages-artifact@v4
       with:
         path: public
+  deploy:
+    needs: ubuntu-test
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+    steps:
+    - name: '部署网页'
+      uses: actions/deploy-pages@v4
   win-test:
     needs: ubuntu-test
     runs-on: windows-latest
